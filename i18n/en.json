@@ -33,5 +33,10 @@
   "auth_success": "Successful login",
   "auth_exists": "User already exists",
   "auth_created": "Account created",
-  "auth_logout": "Exit"
+  "auth_logout": "Exit",
+  "about_title": "About",
+  "about_lead": "<strong>RPA</strong> is a project that runs tabletop role-playing games online. Since 2020 we launched 13+ systems and our game-masters ran over 1500 sessions.",
+  "about_body": "RPA brings players and GMs together, provides a platform for recordings, modules and community resources.",
+  "about_masters_title": "Our Game Masters",
+  "label_systems": "Systems:"
 }

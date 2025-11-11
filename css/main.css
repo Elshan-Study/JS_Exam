@@ -151,6 +151,39 @@ img{max-width:100%;display:block}
 .slider.single-slider .dots button { width:10px; height:10px; border-radius:50%; border:none; opacity:.5; cursor:pointer; background:var(--muted); }
 .slider.single-slider .dots button.active { opacity:1; background:var(--accent); transform:scale(1.05); }
 
+/* ===== about page styles ===== */
+.about-page { margin: 30px 60px; }
+.about-page .title { font-size: 36px; margin-bottom: 12px; border-bottom: 4px solid rgba(255,255,255,0.06); padding-bottom: 8px; }
+.about-page .text { background: var(--panel); border: 1px solid rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; color: var(--text); line-height:1.6; margin-bottom: 14px; }
+
+.title.tl2 { margin-top: 22px; font-size: 28px; border-bottom: 3px solid rgba(255,255,255,0.04); padding-bottom: 6px; }
+
+/* DM cards */
+.dms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 14px;
+}
+.dm {
+    width: 260px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    text-align: center;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.dm img { width:100px;height:100px;border-radius:50%;object-fit:cover;margin: 0 auto 12px; border:2px solid rgba(255,255,255,0.06); }
+.dm h3 { margin: 0 0 8px; font-size:18px; color:var(--text); }
+.dm .dm-age { font-weight:400; font-size:13px; color:var(--muted); margin-left:6px; }
+.dm .dm-desc { font-size:14px; color:var(--muted); margin-bottom:8px; padding: 0 6px; text-align: left; }
+.dm .dm-systems { font-size:13px; color:var(--muted); text-align:left; padding: 0 6px; }
+
+/* hover */
+.dm:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 14px 30px rgba(0,0,0,0.35); }
+
 /* responsive */
 @media (max-width:800px) { .slider.single-slider .slide img { height:220px } }
 @media (max-width:900px){
@@ -164,3 +197,9 @@ img{max-width:100%;display:block}
     .header-controls{width:100%;justify-content:flex-end}
     .site-title{display:none}
 }
+@media (max-width:900px) {
+    .about-page { margin: 20px; }
+    .dms { justify-content:center; }
+    .dm { width: 100%; max-width:420px; }
+}
+

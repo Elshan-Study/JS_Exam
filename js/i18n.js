@@ -14,7 +14,6 @@ async function loadTranslationsFor(lang) {
         TRANSLATIONS = await res.json();
         LANG = lang;
         localStorage.setItem('lang', lang);
-        // если select уже есть — поставим значение
         const sel = document.getElementById(LANG_SELECT_ID);
         if (sel) sel.value = lang;
         applyTranslations();
@@ -33,7 +32,7 @@ function applyTranslations(root = document) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             el.setAttribute('placeholder', val);
         } else {
-            el.textContent = val;
+            el.innerHTML = val;
         }
     });
 }
