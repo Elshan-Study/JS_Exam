@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Role Play Asylum</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="site">
+    <div id="header-placeholder"></div>
+
+    <div id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb"></div>
+
+    <main id="app" class="app" role="main" aria-live="polite"></main>
+
+    <div id="footer-placeholder"></div>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+</div>
+
+<!-- Core scripts -->
+<script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/search.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/router.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        await loadPartial('partials/header.html', '#header-placeholder');
+        await loadPartial('partials/footer.html', '#footer-placeholder');
+        const start = '/pages/main.html';
+        await loadPage(start, false);
+        initTheme();
+        initLangSwitcher();
+        initScrollTop();
+    });
+</script>
+</body>
+</html>
