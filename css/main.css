@@ -198,6 +198,54 @@ img{max-width:100%;display:block}
 .sort-btn { display:block; width:100%; text-align:left; padding:6px 8px; background:transparent; border:none; color:var(--text); cursor:pointer; }
 .sort-btn:hover { background: rgba(255,255,255,0.03); }
 
+/* archive page */
+.archive-page .tag-list { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+.archive-page .tag-list button { padding:6px 8px; border-radius:6px; border:none; cursor:pointer; background:transparent; color:var(--text); border:1px solid rgba(255,255,255,0.04); }
+.archive-page .tag-list button.active { background:var(--accent); color:#fff; border-color:transparent; }
+
+.archive-list .article { display:flex; gap:20px; margin:18px 0; border-bottom:1px solid rgba(255,255,255,0.03); padding-bottom:14px; align-items:flex-start; }
+.archive-list img { width:200px; height:120px; object-fit:cover; border-radius:6px; }
+.archive-list .meta { color:var(--muted); margin:6px 0; }
+#archive-search { margin:12px 0 14px; padding:10px 12px; width:100%; border-radius:6px; background:var(--panel-input); border:1px solid rgba(255,255,255,0.02); color:var(--text); }
+
+/* ===== Tag chips ===== */
+.archive-list .tag { display:inline-block; margin:8px 6px 8px 0; }
+.archive-list .tag .tag-chip {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: rgba(255,255,255,0.03);
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+.archive-list .tag .tag-chip:hover { transform: translateY(-3px); background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); }
+
+/* color variants for tag wrappers (keeps same classes t1/t2/t3/t4 you used) */
+.archive-list .tag.t1 .tag-chip { background: linear-gradient(90deg,#f6c1e7,#da4aa2); color:#111; }
+.archive-list .tag.t2 .tag-chip { background: linear-gradient(90deg,#8ff0ef,#16c1c1); color:#111; }
+.archive-list .tag.t3 .tag-chip { background: linear-gradient(90deg,#d5f69a,#58c116); color:#111; }
+.archive-list .tag.t4 .tag-chip { background: linear-gradient(90deg,#f5e69b,#c1a516); color:#111; }
+
+/* style for tag list control buttons (sidebar) */
+.tag-list .tag-btn {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid rgba(255,255,255,0.04);
+    background: transparent;
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background .12s ease, color .12s ease, transform .12s ease;
+}
+.tag-list .tag-btn:hover { transform: translateY(-2px); background: rgba(0,0,0,0.08); }
+.tag-list .tag-btn.active { background: var(--accent); color:#fff; border-color:transparent; box-shadow: 0 6px 20px rgba(0,0,0,0.28); }
+
 /* responsive */
 @media (max-width:800px) { .slider.single-slider .slide img { height:220px } }
 @media (max-width:900px){
@@ -222,4 +270,10 @@ img{max-width:100%;display:block}
     .games-page .articles { order:1; }
     .article { flex-direction:column; }
     .article img { width:100%; height:200px; }
+}
+@media (max-width:900px) {
+    .archive-list .article { flex-direction:column; }
+    .archive-list img { width:100%; height:200px; }
+    .archive-page .side-bar { order:2; width:100%; }
+    .archive-page .articles { order:1; }
 }

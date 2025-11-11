@@ -130,6 +130,10 @@ function initPageScripts(contentUrl) {
     if (contentUrl && contentUrl.includes('games.html') && typeof initGamesPage === 'function') {
         initGamesPage();
     }
+
+    if (contentUrl && contentUrl.includes('archive.html') && typeof initArchivePage === 'function') {
+        initArchivePage();
+    }
 }
 
 // --- fixLocalPaths

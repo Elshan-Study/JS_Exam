@@ -1,0 +1,60 @@
+<section class="archive-page container">
+
+    <div class="main-content">
+        <aside class="side-bar" aria-label="Sidebar">
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
+                    <img src="images/advertisement.jpg" alt="advertisement">
+                </a>
+            </div>
+
+            <div class="sb-text">
+                <p class="sb-title" data-i18n="archive_sort_by">Сортировать / Фильтровать:</p>
+                <button class="sort-btn" data-sort="date" data-order="desc">- <span data-i18n="sort_date">По дате</span></button>
+                <button class="sort-btn" data-sort="title" data-order="asc">- <span data-i18n="sort_title">По названию</span></button>
+
+                <div style="margin-top:12px">
+                    <p class="sb-title" data-i18n="archive_tags">Теги</p>
+                    <div id="tag-list" class="tag-list" aria-label="Tags">
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <div class="articles archive-list" id="archive-list">
+            <p class="title" data-i18n="archive_title">Архив материалов</p>
+
+            <input id="archive-search" type="search" data-i18n="arch_search_placeholder" placeholder="Найти файл..." aria-label="Search archive">
+
+            <div class="article" data-title="VTM Revised" data-system="VTM" data-tags="Corebook,Rules" data-date="2024-08-08" data-href="https://drive.google.com/file/d/1EXeKR2uUJ5BbPnA4CmWZloPHU0wNiMxp/view?usp=drive_link">
+                <a href="https://drive.google.com/file/d/1EXeKR2uUJ5BbPnA4CmWZloPHU0wNiMxp/view?usp=drive_link" target="_blank" rel="noopener"><img src="images/vtm_core_1.PNG" alt="Файл"></a>
+                <div class="text">
+                    <a class="a-1" href="https://drive.google.com/file/d/1EXeKR2uUJ5BbPnA4CmWZloPHU0wNiMxp/view?usp=drive_link" target="_blank" rel="noopener"><h2>VTM Revised</h2></a>
+                    <div class="tag t1">
+                        <button type="button" class="tag-chip" data-tag="Corebook">Corebook</button>
+                    </div>
+                    <div class="tag t3">
+                        <button type="button" class="tag-chip" data-tag="Rules">Rules</button>
+                    </div>
+                    <p class="desc" data-i18n="archive_desc1">Краткое описание VTM Revised.</p>
+                    <p class="meta" data-i18n="archive_meta1"><span class="mdate">08/08/2024</span></p>
+                </div>
+            </div>
+
+            <div class="article" data-title="Vampire Player Guild" data-system="VTM" data-tags="DLC" data-date="2024-07-12" data-href="https://drive.google.com/file/d/17Ffod1JBM-4nJ7uNI-bBYt5sqHn4860P/view?usp=drive_link">
+                <a href="https://drive.google.com/file/d/17Ffod1JBM-4nJ7uNI-bBYt5sqHn4860P/view?usp=drive_link" target="_blank" rel="noopener"><img src="images/vtm_dlc_1.PNG" alt="Файл"></a>
+                <div class="text">
+                    <a class="a-1" href="https://drive.google.com/file/d/17Ffod1JBM-4nJ7uNI-bBYt5sqHn4860P/view?usp=drive_link" target="_blank" rel="noopener"><h2>Vampire Player Guild</h2></a>
+                    <div class="tag t2">
+                        <button type="button" class="tag-chip" data-tag="DLC">DLC</button>
+                    </div>
+                    <p class="desc" data-i18n="archive_desc2">Дополнение к VTM.</p>
+                    <p class="meta" data-i18n="archive_meta2"><span class="mdate">12/07/2024</span></p>
+                </div>
+            </div>
+
+            <div class="content-footer"></div>
+        </div>
+    </div>
+
+</section>

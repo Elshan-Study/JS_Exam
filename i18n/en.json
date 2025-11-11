@@ -48,5 +48,19 @@
   "sort_players": "Count of players",
   "label_master": "Master:",
   "label_players": "Players:",
-  "joined_btn": "CONNECTED"
+  "join_btn": "CONNECT",
+  "joined_btn": "CONNECTED",
+  "archive_title": "Archive of materials",
+  "archive_sort_by": "Sort / Filter by:",
+  "archive_tags": "Tags",
+  "archive_look": "Look",
+  "archive_desc1": "Short description of VTM Revised.",
+  "archive_desc2": "DLC for VTM.",
+  "search_placeholder": "Search...",
+  "games_search_placeholder": "Find game...",
+  "arch_search_placeholder": "Find file...",
+  "about_DM1": "A storyteller with vast experience in gothic and horror sessions. Enjoys deep plots and complex moral choices.",
+  "about_DM2": "Specialist in techno settings and atmospheric cyberpunk campaigns.",
+  "about_DM3": "Excels at historical and horror setups. Values detailed interaction between the world and the characters.",
+  "about_DM4": "A young and energetic storyteller who enjoys dynamic and combat-focused mechanics."
 }

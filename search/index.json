@@ -18,9 +18,9 @@
     "lang": "ru"
   },
   {
-    "path": "/pages/videos.html",
-    "title": "Записи игр",
-    "content": "Видео с игровых сессий и трансляций",
+    "path": "/pages/archive.html",
+    "title": "Архивы",
+    "content": "Книги и документы",
     "lang": "ru"
   }
 ]
