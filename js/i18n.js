@@ -27,15 +27,21 @@ function applyTranslations(root = document) {
     root.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         if (!key) return;
+        if (key === 'auth_btn') return;
         const val = TRANSLATIONS[key];
         if (val === undefined) return;
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             el.setAttribute('placeholder', val);
         } else {
-            el.innerHTML = val;
+            el.innerHTML = val; // allow <b>, <i> etc in translations
         }
     });
+
+    if (typeof window.renderUserInHeader === 'function') {
+        window.renderUserInHeader();
+    }
 }
+
 
 function setupLangHandler() {
     if (window.__langHandlerInstalled) return;

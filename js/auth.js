@@ -37,20 +37,34 @@ function renderUserInHeader(){
     const authBtn = document.getElementById('auth-btn');
     const user = getCurrentUser();
     if (!disp || !authBtn) return;
+
     if (user) {
         disp.textContent = user.username;
         authBtn.textContent = TRANSLATIONS?.auth_logout || 'Выйти';
-        authBtn.onclick = () => {
-            localStorage.removeItem(CURRENT_USER_KEY);
-            renderUserInHeader();
-            authBtn.textContent = TRANSLATIONS?.auth_btn || 'Войти/Регистрация';
-            authBtn.onclick = showAuthModal;
-        };
+        authBtn.classList.add('logged-in');
     } else {
         disp.textContent = '';
         authBtn.textContent = TRANSLATIONS?.auth_btn || 'Войти/Регистрация';
-        authBtn.onclick = showAuthModal;
+        authBtn.classList.remove('logged-in');
     }
+}
+
+function setupAuthDelegation() {
+    if (window.__authDelegationInstalled) return;
+    window.__authDelegationInstalled = true;
+
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('#auth-btn');
+        if (!btn) return;
+
+        const user = getCurrentUser();
+        if (user) {
+            localStorage.removeItem(CURRENT_USER_KEY);
+            renderUserInHeader();
+            return;
+        }
+        if (typeof showAuthModal === 'function') showAuthModal();
+    });
 }
 
 // Modal UI
@@ -175,8 +189,7 @@ function showAuthModal(){
 }
 
 function initAuth(){
-    const btn = document.getElementById('auth-btn');
-    if (btn) btn.addEventListener('click', showAuthModal);
+    setupAuthDelegation();
     renderUserInHeader();
 }
 

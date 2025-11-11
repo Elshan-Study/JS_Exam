@@ -36,6 +36,7 @@
             if (typeof initLangSwitcher === 'function') initLangSwitcher();
 
             await loadPartial('partials/header.html', '#header-placeholder');
+            if (typeof applyTranslations === 'function') applyTranslations(document.querySelector('#header-placeholder'));
             await loadPartial('partials/footer.html', '#footer-placeholder');
 
             if (typeof initTheme === 'function') initTheme();
