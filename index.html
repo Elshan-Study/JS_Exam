@@ -22,6 +22,7 @@
 
 <!-- Core scripts -->
 <script src="js/i18n.js"></script>
+<script src="js/auth.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/search.js"></script>
@@ -30,13 +31,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', async () => {
-        await loadPartial('partials/header.html', '#header-placeholder');
-        await loadPartial('partials/footer.html', '#footer-placeholder');
-        const start = '/pages/main.html';
-        await loadPage(start, false);
-        initTheme();
-        initLangSwitcher();
-        initScrollTop();
+        try {
+            if (typeof initTheme === 'function') initTheme();
+            if (typeof initLangSwitcher === 'function') initLangSwitcher();
+
+            await loadPartial('partials/header.html', '#header-placeholder');
+            await loadPartial('partials/footer.html', '#footer-placeholder');
+
+            if (typeof initAuth === 'function') initAuth();
+
+            const start = 'pages/main.html';
+            await loadPage(start, false);
+
+            if (typeof initScrollTop === 'function') initScrollTop();
+        } catch (e) {
+            console.error('Startup error', e);
+        }
     });
 </script>
 </body>

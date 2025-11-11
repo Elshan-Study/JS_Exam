@@ -24,5 +24,14 @@
   "g_coc": "Call of Cthulhu",
   "g_coc_desc": "Ролевая игра в жанре ужасов, основана на Лавкрафте...",
   "g_vtm": "Vampire: The Masquerade",
-  "g_vtm_desc": "Ролевая игра World of Darkness про вампиров..."
+  "g_vtm_desc": "Ролевая игра World of Darkness про вампиров...",
+  "auth_btn": "Войти/Регистрация",
+  "auth_login": "Вход",
+  "auth_register": "Регистрация",
+  "auth_fill": "Введите логин и пароль",
+  "auth_failed": "Неверные учётные данные",
+  "auth_success": "Успешный вход",
+  "auth_exists": "Пользователь уже существует",
+  "auth_created": "Аккаунт создан",
+  "auth_logout": "Выйти"
 }

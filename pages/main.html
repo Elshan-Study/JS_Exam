@@ -1,67 +1,58 @@
-<section class="hero">
-    <div id="heroSlider" class="slider">
+<section class="games-slider-wrap">
+    <h2 class="sr-only" data-i18n="popular_games">Популярные игры</h2>
+    <div id="gamesSlider" class="slider">
         <div class="slides">
-            <div class="slide"><img src="/images/slide1.jpg" alt=""><div class="caption" data-i18n="slide_1">Добро пожаловать</div></div>
-            <div class="slide"><img src="/images/slide2.jpg" alt=""><div class="caption" data-i18n="slide_2">Игры и истории</div></div>
-            <div class="slide"><img src="/images/slide3.jpg" alt=""><div class="caption" data-i18n="slide_3">Присоединяйся</div></div>
+            <div class="slide">
+                <div class="game-card slide-game">
+                    <img src="images/Witcher.png" alt="The Witcher">
+                    <h3 data-i18n="g_witcher">The Witcher</h3>
+                    <p class="desc" data-i18n="g_witcher_desc">Настольная ролевая игра «Ведьмак» создана ...</p>
+                    <a href="pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="game-card slide-game">
+                    <img src="images/dnd.png" alt="Dungeons & Dragons">
+                    <h3 data-i18n="g_dnd">Dungeon and Dragons</h3>
+                    <p class="desc" data-i18n="g_dnd_desc">Dungeons & Dragons — настольная ролевая игра ...</p>
+                    <a href="pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="game-card slide-game">
+                    <img src="images/wta.png" alt="Werewolf">
+                    <h3 data-i18n="g_wta">Werewolf: The Apocalypse</h3>
+                    <p class="desc" data-i18n="g_wta_desc">Настольная ролевая игра, часть ...</p>
+                    <a href="pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="game-card slide-game">
+                    <img src="images/call-of-cthulhu.jpg" alt="Call of Cthulhu">
+                    <h3 data-i18n="g_coc">Call of Cthulhu</h3>
+                    <p class="desc" data-i18n="g_coc_desc">Ролевая игра в жанре ужасов ...</p>
+                    <a href="pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="game-card slide-game">
+                    <img src="images/vtm.jpg" alt="Vampire: The Masquerade">
+                    <h3 data-i18n="g_vtm">Vampire: The Masquerade</h3>
+                    <p class="desc" data-i18n="g_vtm_desc">Ролевая игра World of Darkness ...</p>
+                    <a href="pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
+                </div>
+            </div>
         </div>
+
         <button class="prev" aria-label="Previous">‹</button>
         <button class="next" aria-label="Next">›</button>
         <div class="dots"></div>
     </div>
 </section>
-
-<div class="container">
-    <div class="game-title">
-        <h2 data-i18n="popular_games">Популярные игры</h2>
-    </div>
-
-    <section class="popular-content" id="games-list" aria-label="Popular games">
-        <article class="game-card" data-title="The Witcher" data-tags="fantasy,political">
-            <div class="game-front">
-                <img src="/images/Witcher.png" alt="The Witcher">
-                <h3 data-i18n="g_witcher">The Witcher</h3>
-                <p class="desc" data-i18n="g_witcher_desc">Настольная ролевая игра «Ведьмак» создана с CD Projekt Red...</p>
-                <a href="/pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
-            </div>
-        </article>
-
-        <article class="game-card" data-title="Dungeons and Dragons" data-tags="fantasy,classic">
-            <div class="game-front">
-                <img src="/images/dnd.png" alt="Dungeons & Dragons">
-                <h3 data-i18n="g_dnd">Dungeon and Dragons</h3>
-                <p class="desc" data-i18n="g_dnd_desc">Dungeons & Dragons — настольная ролевая игра в жанре фэнтези...</p>
-                <a href="/pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
-            </div>
-        </article>
-
-        <article class="game-card" data-title="Werewolf The Apocalypse" data-tags="horror,werewolf">
-            <div class="game-front">
-                <img src="/images/wta.png" alt="Werewolf">
-                <h3 data-i18n="g_wta">Werewolf: The Apocalypse</h3>
-                <p class="desc" data-i18n="g_wta_desc">Настольная ролевая игра, часть «Старого мира Тьмы»...</p>
-                <a href="/pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
-            </div>
-        </article>
-
-        <article class="game-card" data-title="Call of Cthulhu" data-tags="horror,investigation">
-            <div class="game-front">
-                <img src="/images/call-of-cthulhu.jpg" alt="Call of Cthulhu">
-                <h3 data-i18n="g_coc">Call of Cthulhu</h3>
-                <p class="desc" data-i18n="g_coc_desc">Ролевая игра в жанре ужасов, основана на Лавкрафте...</p>
-                <a href="/pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
-            </div>
-        </article>
-
-        <article class="game-card" data-title="Vampire The Masquerade" data-tags="vampire,gothic">
-            <div class="game-front">
-                <img src="/images/vtm.jpg" alt="Vampire: The Masquerade">
-                <h3 data-i18n="g_vtm">Vampire: The Masquerade</h3>
-                <p class="desc" data-i18n="g_vtm_desc">Ролевая игра World of Darkness про вампиров...</p>
-                <a href="/pages/games.html" data-link class="try-btn" data-i18n="try_btn">Попробуй</a>
-            </div>
-        </article>
-    </section>
 
     <div class="main-content">
         <div class="articles" id="articles-list">
@@ -88,15 +79,14 @@
 
         <aside class="side-bar" aria-label="Sidebar">
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="ad-link" target="_blank" rel="noopener">
-                <img src="/images/advertisement.jpg" alt="advertisement">
+                <img src="images/advertisement.jpg" alt="advertisement">
             </a>
 
             <div class="sb-title" data-i18n="recent_uploads">Последние записи</div>
-            <div class="sb-text"><a href="/pages/videos.html" data-link>12:30 — Lorem ipsum dolor sit amet.</a></div>
-            <div class="sb-text"><a href="/pages/videos.html" data-link>28/12/2024 18:00 — Lorem ipsum dolor sit amet.</a></div>
+            <div class="sb-text"><a href="pages/videos.html" data-link>12:30 — Lorem ipsum dolor sit amet.</a></div>
+            <div class="sb-text"><a href="pages/videos.html" data-link>28/12/2024 18:00 — Lorem ipsum dolor sit amet.</a></div>
         </aside>
     </div>
-</div>
 
 <div class="help-icon" aria-hidden="true">
     <div class="tooltip" data-i18n="help_tooltip">Чем могу помочь?</div>
