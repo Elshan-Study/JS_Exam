@@ -62,5 +62,20 @@
   "about_DM1": "A storyteller with vast experience in gothic and horror sessions. Enjoys deep plots and complex moral choices.",
   "about_DM2": "Specialist in techno settings and atmospheric cyberpunk campaigns.",
   "about_DM3": "Excels at historical and horror setups. Values detailed interaction between the world and the characters.",
-  "about_DM4": "A young and energetic storyteller who enjoys dynamic and combat-focused mechanics."
+  "about_DM4": "A young and energetic storyteller who enjoys dynamic and combat-focused mechanics.",
+  "games_ad_alt": "Advertisement banner",
+  "game_title_witcher": "The Witcher: Dark Harvest",
+  "game_desc_witcher": "A campaign set in a grim world where players’ choices shape the story.",
+  "game_title_wta": "Werewolves: Moon over the Ob River",
+  "game_desc_wta": "A campaign about clan intrigues and the struggle against spiritual threats.",
+  "game_title_dnd": "DnD5: The Price of Progress",
+  "game_desc_dnd": "Heroes and technology — when progress changes the world.",
+  "game_title_vtm": "Vampires: The Victorian Era",
+  "game_desc_vtm": "Dark intrigues and the society of the Victorian age.",
+  "game_title_coc": "Call of Cthulhu: Monologue with the Moon",
+  "game_desc_coc": "Exploring madness and ancient libraries.",
+  "news_1_title": "Release of New Materials",
+  "news_1_desc": "A set of Witcher modules has been published and is now available for download.",
+  "news_2_title": "Platform Update",
+  "news_2_desc": "Night mode support added and search functionality improved."
 }
