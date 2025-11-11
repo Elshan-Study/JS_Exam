@@ -33,10 +33,14 @@
     document.addEventListener('DOMContentLoaded', async () => {
         try {
             if (typeof initTheme === 'function') initTheme();
+
             if (typeof initLangSwitcher === 'function') initLangSwitcher();
 
             await loadPartial('partials/header.html', '#header-placeholder');
             await loadPartial('partials/footer.html', '#footer-placeholder');
+
+            if (typeof initTheme === 'function') initTheme();
+            if (typeof initLangSwitcher === 'function') initLangSwitcher();
 
             if (typeof initAuth === 'function') initAuth();
 
@@ -44,6 +48,7 @@
             await loadPage(start, false);
 
             if (typeof initScrollTop === 'function') initScrollTop();
+
         } catch (e) {
             console.error('Startup error', e);
         }

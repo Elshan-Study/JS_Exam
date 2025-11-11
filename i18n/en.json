@@ -24,5 +24,14 @@
   "g_coc": "Call of Cthulhu",
   "g_coc_desc": "A horror tabletop RPG inspired by H.P. Lovecraft...",
   "g_vtm": "Vampire: The Masquerade",
-  "g_vtm_desc": "A World of Darkness game about vampires..."
+  "g_vtm_desc": "A World of Darkness game about vampires...",
+  "auth_btn": "Login/Registration",
+  "auth_login": "Login",
+  "auth_register": "Registration",
+  "auth_fill": "Input login and password",
+  "auth_failed": "Invalid credentials",
+  "auth_success": "Successful login",
+  "auth_exists": "User already exists",
+  "auth_created": "Account created",
+  "auth_logout": "Exit"
 }

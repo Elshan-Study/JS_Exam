@@ -9,7 +9,7 @@ async function ensureUsersSeeded(){
             if (res.ok) {
                 users = await res.json();
             } else {
-                users = []; // empty fallback
+                users = [];
             }
         } catch (e) {
             users = [];
@@ -72,28 +72,28 @@ function createAuthModal(){
     modal.innerHTML = `
     <div style="background:var(--panel);padding:20px;border-radius:8px;min-width:320px;max-width:420px;color:var(--text)">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <h3 id="auth-title">Вход</h3>
-        <button id="auth-close" style="background:transparent;border:none;color:var(--muted);font-size:18px;cursor:pointer">✕</button>
+        <h3 id="auth-title" data-i18n="auth_login">Вход</h3>
+        <button id="auth-close" data-i18n="auth_close" style="background:transparent;border:none;color:var(--muted);font-size:18px;cursor:pointer">✕</button>
       </div>
       <div style="display:flex;gap:8px;margin-bottom:10px">
-        <button id="tab-login" class="auth-tab">Вход</button>
-        <button id="tab-register" class="auth-tab">Регистрация</button>
+        <button id="tab-login" class="auth-tab" data-i18n="auth_login">Вход</button>
+        <button id="tab-register" class="auth-tab" data-i18n="auth_register">Регистрация</button>
       </div>
       <form id="auth-form">
         <div style="margin-bottom:8px">
-          <label>Логин / Username</label><br/>
-          <input id="auth-username" required style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06)"/>
+          <label data-i18n="label_username">Логин / Username</label><br/>
+          <input id="auth-username" required placeholder="" style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06)"/>
         </div>
         <div style="margin-bottom:8px">
-          <label>Пароль / Password</label><br/>
-          <input id="auth-password" type="password" required style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06)"/>
+          <label data-i18n="label_password">Пароль / Password</label><br/>
+          <input id="auth-password" type="password" required placeholder="" style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06)"/>
         </div>
         <div id="auth-extra" style="display:none;margin-bottom:8px">
-          <label>Email (optional)</label><br/>
-          <input id="auth-email" type="email" style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06)"/>
+          <label data-i18n="label_email">Email (optional)</label><br/>
+          <input id="auth-email" type="email" placeholder="" style="width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06)"/>
         </div>
         <div style="display:flex;gap:8px;justify-content:flex-end">
-          <button type="button" id="auth-submit" style="padding:8px 12px;border-radius:6px;background:var(--accent);border:none;color:#fff;cursor:pointer">OK</button>
+          <button type="button" id="auth-submit" data-i18n="auth_submit" style="padding:8px 12px;border-radius:6px;background:var(--accent);border:none;color:#fff;cursor:pointer">OK</button>
         </div>
         <div id="auth-msg" style="margin-top:8px;color:var(--muted)"></div>
       </form>
@@ -101,11 +101,16 @@ function createAuthModal(){
   `;
     document.body.appendChild(modal);
 
+    if (typeof applyTranslations === 'function') applyTranslations(modal);
+
     modal.querySelector('#auth-close').addEventListener('click', ()=> modal.remove());
     modal.querySelector('#tab-login').addEventListener('click', ()=> setAuthMode('login'));
     modal.querySelector('#tab-register').addEventListener('click', ()=> setAuthMode('register'));
     modal.querySelector('#auth-submit').addEventListener('click', onAuthSubmit);
+
     setAuthMode('login');
+    if (typeof applyTranslations === 'function') applyTranslations(modal);
+
     return modal;
 }
 
