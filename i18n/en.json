@@ -38,5 +38,15 @@
   "about_lead": "<strong>RPA</strong> is a project that runs tabletop role-playing games online. Since 2020 we launched 13+ systems and our game-masters ran over 1500 sessions.",
   "about_body": "RPA brings players and GMs together, provides a platform for recordings, modules and community resources.",
   "about_masters_title": "Our Game Masters",
-  "label_systems": "Systems:"
+  "label_systems": "Systems:",
+  "games_title": "Our games",
+  "games_sort_by": "Sort by:",
+  "sort_date": "Date",
+  "sort_title": "Name",
+  "sort_system": "Game setting",
+  "sort_master": "Master",
+  "sort_players": "Count of players",
+  "label_master": "Master:",
+  "label_players": "Players:",
+  "joined_btn": "CONNECTED"
 }

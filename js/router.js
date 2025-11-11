@@ -126,6 +126,10 @@ function initPageScripts(contentUrl) {
     if (typeof initAuth === 'function') initAuth();
 
     if (typeof applyTranslations === 'function') applyTranslations();
+
+    if (contentUrl && contentUrl.includes('games.html') && typeof initGamesPage === 'function') {
+        initGamesPage();
+    }
 }
 
 // --- fixLocalPaths

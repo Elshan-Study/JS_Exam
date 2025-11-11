@@ -1,0 +1,90 @@
+<section class="games-page container">
+
+    <div class="main-content">
+        <aside class="side-bar" aria-label="Sidebar">
+            <div class="video">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">
+                    <img src="images/advertisement.jpg" alt="advertisement">
+                </a>
+            </div>
+
+            <div class="sb-text">
+                <p class="sb-title" data-i18n="games_sort_by">Сортировать по:</p>
+                <button class="sort-btn" data-sort="date" data-order="desc">- <span data-i18n="sort_date">Дате</span></button>
+                <button class="sort-btn" data-sort="title" data-order="asc">- <span data-i18n="sort_title">Названию</span></button>
+                <button class="sort-btn" data-sort="system" data-order="asc">- <span data-i18n="sort_system">Игровой системе</span></button>
+                <button class="sort-btn" data-sort="master" data-order="asc">- <span data-i18n="sort_master">Мастеру</span></button>
+                <button class="sort-btn" data-sort="players" data-order="desc">- <span data-i18n="sort_players">По числу игроков</span></button>
+            </div>
+        </aside>
+
+        <div class="articles games-list" id="games-list">
+            <p class="title" data-i18n="games_title">Наши игры</p>
+
+            <input id="games-search" type="search" placeholder="Найти игру..." aria-label="Search games">
+
+            <div class="article" data-title="Ведьмак: Темная Жатва" data-system="Witcher" data-master="Влад" data-players="6" data-date="2025-01-01T18:00:00Z">
+                <a href="#"><img src="images/Witcher.png" alt="Игра"></a>
+                <div class="text">
+                    <a class="a-1" href="#"><h2>Ведьмак: Темная Жатва</h2></a>
+                    <p class="desc">Кампания в мрачном мире, где решения игроков меняют сюжет.</p>
+                    <p><strong data-i18n="label_master">Мастер:</strong> <span class="meta master">Влад</span></p>
+                    <p><strong data-i18n="label_players">Игроков:</strong> <span class="meta players">6/6</span></p>
+                    <p class="date" data-date-human="Сегодня в 18:00">2025-01-01</p>
+                    <div class="connect"><button class="join-btn">ПРИСОЕДИНИТЬСЯ</button></div>
+                </div>
+            </div>
+
+            <div class="article" data-title="Оборотни: Луна над Обью" data-system="WTA" data-master="Эльшан" data-players="4" data-date="2025-01-03T18:00:00Z">
+                <a href="#"><img src="images/wta.png" alt="Игра"></a>
+                <div class="text">
+                    <a class="a-1" href="#"><h2>Оборотни: Луна над Обью</h2></a>
+                    <p class="desc">Кампания о клановых интригах и борьбе с духовными угрозами.</p>
+                    <p><strong data-i18n="label_master">Мастер:</strong> <span class="meta master">Эльшан</span></p>
+                    <p><strong data-i18n="label_players">Игроков:</strong> <span class="meta players">4/5</span></p>
+                    <p class="date" data-date-human="В пятницу в 18:00">2025-01-03</p>
+                    <div class="connect"><button class="join-btn">ПРИСОЕДИНИТЬСЯ</button></div>
+                </div>
+            </div>
+
+            <div class="article" data-title="DnD5: Цена прогресса" data-system="DnD5" data-master="Илья" data-players="3" data-date="2024-01-20T18:00:00Z">
+                <a href="#"><img src="images/dnd.png" alt="Игра"></a>
+                <div class="text">
+                    <a class="a-1" href="#"><h2>DnD5: Цена прогресса</h2></a>
+                    <p class="desc">Герои и технологии — когда прогресс меняет мир.</p>
+                    <p><strong data-i18n="label_master">Мастер:</strong> <span class="meta master">Илья</span></p>
+                    <p><strong data-i18n="label_players">Игроков:</strong> <span class="meta players">3/5</span></p>
+                    <p class="date" data-date-human="20/01/2024 18:00">2024-01-20</p>
+                    <div class="connect"><button class="join-btn">ПРИСОЕДИНИТЬСЯ</button></div>
+                </div>
+            </div>
+
+            <div class="article" data-title="Вампиры: Викторианская Эпоха" data-system="VTM" data-master="Эльшан" data-players="3" data-date="2024-01-23T18:00:00Z">
+                <a href="#"><img src="images/vtm.jpg" alt="Игра"></a>
+                <div class="text">
+                    <a class="a-1" href="#"><h2>Вампиры: Викторианская Эпоха</h2></a>
+                    <p class="desc">Темные интриги и общество викторианской эпохи.</p>
+                    <p><strong data-i18n="label_master">Мастер:</strong> <span class="meta master">Эльшан</span></p>
+                    <p><strong data-i18n="label_players">Игроков:</strong> <span class="meta players">3/4</span></p>
+                    <p class="date" data-date-human="23/01/2024 18:00">2024-01-23</p>
+                    <div class="connect"><button class="join-btn">ПРИСОЕДИНИТЬСЯ</button></div>
+                </div>
+            </div>
+
+            <div class="article" data-title="Зов Ктулху: Монолог с Луной" data-system="CoC" data-master="Максим" data-players="4" data-date="2024-01-28T18:00:00Z">
+                <a href="#"><img src="images/call-of-cthulhu.jpg" alt="Игра"></a>
+                <div class="text">
+                    <a class="a-1" href="#"><h2>Зов Ктулху: Монолог с Луной</h2></a>
+                    <p class="desc">Исследование безумия и древних библиотек.</p>
+                    <p><strong data-i18n="label_master">Мастер:</strong> <span class="meta master">Максим</span></p>
+                    <p><strong data-i18n="label_players">Игроков:</strong> <span class="meta players">4/4</span></p>
+                    <p class="date" data-date-human="28/01/2024 18:00">2024-01-28</p>
+                    <div class="connect"><button class="join-btn">ПРИСОЕДИНИТЬСЯ</button></div>
+                </div>
+            </div>
+
+            <div class="content-footer"></div>
+        </div>
+    </div>
+
+</section>
